@@ -73,8 +73,8 @@ export default function ForgotPasswordPage() {
 
         <Card className="border-0 shadow-lg">
           <CardHeader className="text-center space-y-2">
-            <div className="mx-auto h-12 w-12 rounded-full bg-primary flex items-center justify-center mb-4">
-              <span className="text-primary-foreground font-bold text-lg">SC</span>
+            <div className="mx-auto h-16 w-16 flex items-center justify-center mb-4">
+              <img src="/2.1.png" alt="logo" />
             </div>
             <CardTitle className="text-2xl font-bold">Recuperar Contraseña</CardTitle>
             <CardDescription>Ingresa tu email y te enviaremos un enlace para restablecer tu contraseña</CardDescription>

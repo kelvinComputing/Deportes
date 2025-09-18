@@ -14,10 +14,11 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">SC</span>
+            <div className="h-16 w-16">
+					<img src="/2.1.png" alt="logo" />
+              
             </div>
-            <span className="font-bold text-xl">SportClub</span>
+            <span className="font-bold text-xl">LIVO</span>
           </Link>
 
           {/* Desktop Navigation */}

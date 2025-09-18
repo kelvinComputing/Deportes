@@ -247,10 +247,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">SC</span>
+                <div className="h-12 w-12 flex items-center justify-center">
+                  <img src="/2.1.png" alt="logo" />
                 </div>
-                <span className="font-bold text-xl">SportClub</span>
+                <span className="font-bold text-xl">LIVO</span>
               </div>
               <p className="text-muted-foreground">La plataforma líder para la gestión de clubes deportivos.</p>
             </div>
@@ -320,7 +320,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 SportClub. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Livo. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
