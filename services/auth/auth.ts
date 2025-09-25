@@ -1,19 +1,20 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
-export async function loginApi(email: string, password: string, rememberMe: boolean) {
+export async function loginApi(username: string, password: string) {
 	try {
 		const res = await fetch(`${API_URL}/auth/login`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ email, password, rememberMe }),
+			credentials: "include",
+			body: JSON.stringify({ username, password }),
 		})
 
 		if (!res.ok) {
 			throw new Error("Error en login")
 		}
-
+// 
 		const data = await res.json()
 		return data
 	} catch (err) {

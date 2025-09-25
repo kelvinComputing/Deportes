@@ -16,14 +16,14 @@ export default function LoginPage() {
 	const [showPassword, setShowPassword] = useState(false)
 	const [rememberMe, setRememberMe] = useState(false)
 	const [formData, setFormData] = useState({
-		email: "",
+		username: "",
 		password: "",
 	})
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
 		try {
-			const data = await loginApi(formData.email, formData.password, rememberMe)
+			const data = await loginApi(formData.username, formData.password)
 			console.log("Respuesta del backend:", data)
 
 			// Ejemplo: guardar token en localStorage o cookies
@@ -32,7 +32,7 @@ export default function LoginPage() {
 			}
 
 			// Redirigir a dashboard
-			window.location.href = "/dashboard"
+			// window.location.href = "/dashboard"
 		} catch (error) {
 			alert("Credenciales incorrectas")
 		}
@@ -65,13 +65,13 @@ export default function LoginPage() {
 						<form onSubmit={handleSubmit} className="space-y-6">
 							{/* Email Field */}
 							<div className="space-y-2">
-								<Label htmlFor="email">Correo Electrónico</Label>
+								<Label htmlFor="username">Usuario</Label>
 								<Input
-									id="email"
+									id="username"
 									type="text"
-									placeholder="tu@email.com"
-									value={formData.email}
-									onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+									placeholder="Monster"
+									value={formData.username}
+									onChange={(e) => setFormData((prev) => ({ ...prev, username: e.target.value }))}
 									required
 								/>
 							</div>
@@ -116,7 +116,7 @@ export default function LoginPage() {
 							</div>
 
 							{/* Submit Button */}
-							<Button type="submit" className="w-full" size="lg" disabled={!formData.email || !formData.password}>
+							<Button type="submit" className="w-full" size="lg" disabled={!formData.username || !formData.password}>
 								Iniciar Sesión
 							</Button>
 						</form>
